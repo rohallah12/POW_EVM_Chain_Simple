@@ -44,7 +44,8 @@ This project provides a minimalistic simulation of a blockchain system that incl
 
 🤝 Contribution:
 
-Feel free to fork this repository and extend it in any way you see fit. If you have any ideas or suggestions, please open an issue or pull request.
+    Feel free to fork this repository and extend it in any way you see fit. If you have any ideas or suggestions, please open an issue or pull request.
+
 ⚠️ Disclaimer:
 
-This project is for educational purposes only and does not serve as a full-fledged blockchain or EVM implementation.
+    This project is for educational purposes only and does not serve as a full-fledged blockchain or EVM implementation.
