@@ -20,21 +20,15 @@ This project provides a minimalistic simulation of a blockchain system that incl
 
 🚀 Quick Start:
 
-    🔍 Clone the Repository
+🔍 Clone the Repository
 
-    bash
-
-git clone [https://github.com/rohallah12/POW_EVM_Chain_Simple]
+    git clone [https://github.com/rohallah12/POW_EVM_Chain_Simple]
 
 📂 Navigate to Project Directory
 
-bash
-
-cd [https://github.com/rohallah12/POW_EVM_Chain_Simple]
+    cd [https://github.com/rohallah12/POW_EVM_Chain_Simple]
 
 ▶️ Run the Program
-
-bash
 
     go run main.go
 
