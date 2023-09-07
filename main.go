@@ -73,18 +73,18 @@ func evm(state_1 State, data []byte) (State, []byte, error) {
 			arg := int64(data[index+1]) //extract next byte
 			stack = arg
 		case ADD:
-			arg := int64(data[index+1]) //extract next 8 bytes
+			arg := int64(data[index+1]) //extract next byte
 			result := stack + arg
 			stack = result
 		case SUB:
-			arg := int64(data[index+1]) //extract next 8 bytes
+			arg := int64(data[index+1]) //extract next byte
 			result := stack - arg
 			stack = result
 		case SSTORE:
-			arg := int64(data[index+1]) //extract next 8 bytes
+			arg := int64(data[index+1]) //extract next byte
 			state_2.Balances[arg] = stack
 		case SLOAD:
-			arg := int64(data[index+1]) //extract next 8 bytes
+			arg := int64(data[index+1]) //extract next byte
 			stack = state_1.Balances[arg]
 		}
 		index += 1
@@ -145,8 +145,8 @@ func encodeBlock(block Block) []byte {
 func CreateTransferTx(from int64, to int64, amount int64) []byte {
 	// opcode for transferring tokens
 	machineCode := []byte{
-		SLOAD, byte(from), SUB, byte(50), SSTORE, byte(from),
-		SLOAD, byte(to), ADD, byte(50), SSTORE, byte(to),
+		SLOAD, byte(from), SUB, byte(amount), SSTORE, byte(from),
+		SLOAD, byte(to), ADD, byte(amount), SSTORE, byte(to),
 	}
 	return machineCode
 }
